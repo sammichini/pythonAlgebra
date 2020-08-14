@@ -30,20 +30,20 @@ def gsBasis(A) :
 def build_reflection_matrix(bearBasis) : # The parameter bearBasis is a 2×2 matrix that is passed to the function.
     # Use the gsBasis function on bearBasis to get the mirror's orthonormal basis.
     E = gsBasis(bearBasis)
-    # Write a matrix in component form that performs the mirror's reflection in the mirror's basis.
-    # Recall, the mirror operates by negating the last component of a vector.
-    # Replace a,b,c,d with appropriate values
+    # performs the mirror's reflection in the mirror's basis.
+
+ 
     TE = np.array([[1, 0],
                    [0, -1]])
     
     
     
     
-    # Combine the matrices E and TE to produce your transformation matrix.
+    # transformation matrix
     T = (E@TE)@inv(E)
     
     
-    # Finally, we return the result. There is no need to change this line.
+
     return T
 
 # First load Pyplot, a graph plotting library.
